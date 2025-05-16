@@ -19,3 +19,7 @@
   border-style: ridge;
   border-color: #b3cccc;
 }
+
+section {
+  background-color: inherit;
+}
