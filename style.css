@@ -1,0 +1,11 @@
+.title {
+  color: black;
+  font-style: bold;
+  text-align: center;
+}
+
+.author {
+  color: grey;
+  font-style: italic;
+  text-align: center;
+}
