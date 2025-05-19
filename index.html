@@ -1,16 +1,123 @@
-<DOCTYPE !HTML>
-  <html>
-    <head>
-      <title>Final Project</title>
-      <link rel="stylesheet" href="style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML & CSS Tag Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #fdf6ff;
+      color: #333;
+    }
 
-    <body class="homeBody">
-      <div>
-        <section class="titleDIV">
-          <h1 class="title">Final Project for Advanced IT</h1>
-          <h3 class="author">By Jack Lester</h3>
-        </section>
-      </div>
-    </body>
-  </html>
+    h1, h2 {
+      color: #8e44ad;
+    }
+
+    code {
+      background: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: #fff;
+      border-left: 5px solid #8e44ad;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .example {
+      margin-top: 0.5rem;
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML & CSS Tag Guide</h1>
+
+  <section>
+    <h2>&lt;h1&gt; to &lt;h6&gt;</h2>
+    <p>Header tags used for titles and subheadings. <code>&lt;h1&gt;</code> is the largest, <code>&lt;h6&gt;</code> is the smallest.</p>
+    <div class="example">
+      <h1>Example H1</h1>
+      <h3>Example H3</h3>
+    </div>
+  </section>
+
+  <section>
+    <h2>&lt;p&gt;</h2>
+    <p>Defines a paragraph of text.</p>
+    <div class="example">
+      <p>This is a paragraph of text.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>&lt;a&gt;</h2>
+    <p>Defines a hyperlink using the <code>href</code> attribute.</p>
+    <div class="example">
+      <a href="https://www.w3schools.com">Visit W3Schools</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>&lt;img&gt;</h2>
+    <p>Embeds an image using the <code>src</code> and <code>alt</code> attributes.</p>
+    <div class="example">
+      <img src="https://via.placeholder.com/100" alt="Placeholder Image" />
+    </div>
+  </section>
+
+  <section>
+    <h2>&lt;div&gt; and &lt;span&gt;</h2>
+    <p><code>&lt;div&gt;</code> is a block-level container. <code>&lt;span&gt;</code> is an inline container.</p>
+    <div class="example">
+      <div style="background: lavender; padding: 10px;">This is a div</div>
+      <p>This is a <span style="color: red;">span</span> inside a paragraph.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>CSS Example</h2>
+    <p>Use CSS to style HTML. CSS can be inline, internal, or external.</p>
+    <div class="example">
+      <style>
+        .blue-box {
+          background: lightblue;
+          padding: 10px;
+          border: 2px solid #333;
+        }
+      </style>
+      <div class="blue-box">Styled with CSS!</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Useful Tags</h2>
+    <ul>
+      <li><code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> — Unordered list</li>
+      <li><code>&lt;strong&gt;</code> — Bold text</li>
+      <li><code>&lt;em&gt;</code> — Italic/emphasized text</li>
+      <li><code>&lt;input&gt;</code> — Form input</li>
+      <li><code>&lt;button&gt;</code> — Button</li>
+    </ul>
+    <div class="example">
+      <ul>
+        <li>Item One</li>
+        <li><strong>Bold Item</strong></li>
+        <li><em>Italic Item</em></li>
+      </ul>
+      <input type="text" placeholder="Type here..." />
+      <button>Click Me</button>
+    </div>
+  </section>
+
+</body>
+</html>
