@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HTML & CSS Tag Guide</title>
   <style>
     body {
@@ -10,6 +10,7 @@
       margin: 2rem;
       background: #fdf6ff;
       color: #333;
+      line-height: 1.6;
     }
 
     h1, h2 {
@@ -37,85 +38,171 @@
       padding: 1rem;
       border-radius: 5px;
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    .flex-box {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .box {
+      background: #d1c4e9;
+      padding: 1rem;
+      border-radius: 6px;
+      flex: 1;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <h1>HTML & CSS Tag Guide</h1>
 
   <section>
-    <h2>&lt;h1&gt; to &lt;h6&gt;</h2>
-    <p>Header tags used for titles and subheadings. <code>&lt;h1&gt;</code> is the largest, <code>&lt;h6&gt;</code> is the smallest.</p>
+    <h2>&lt;header&gt; / &lt;footer&gt;</h2>
+    <p>Used to define header and footer sections of a document.</p>
     <div class="example">
-      <h1>Example H1</h1>
-      <h3>Example H3</h3>
+      <header style="background: lavender; padding: 10px;">This is a header</header>
+      <footer style="background: lavenderblush; padding: 10px;">This is a footer</footer>
     </div>
   </section>
 
   <section>
-    <h2>&lt;p&gt;</h2>
-    <p>Defines a paragraph of text.</p>
+    <h2>&lt;nav&gt;</h2>
+    <p>Defines a navigation section with links.</p>
     <div class="example">
-      <p>This is a paragraph of text.</p>
+      <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+      </nav>
     </div>
   </section>
 
   <section>
-    <h2>&lt;a&gt;</h2>
-    <p>Defines a hyperlink using the <code>href</code> attribute.</p>
+    <h2>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</h2>
+    <p>Used to create tables.</p>
     <div class="example">
-      <a href="https://www.w3schools.com">Visit W3Schools</a>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Alice</td>
+          <td>25</td>
+        </tr>
+      </table>
     </div>
   </section>
 
   <section>
-    <h2>&lt;img&gt;</h2>
-    <p>Embeds an image using the <code>src</code> and <code>alt</code> attributes.</p>
+    <h2>&lt;form&gt;, &lt;input&gt;, &lt;label&gt;, &lt;textarea&gt;, &lt;select&gt;</h2>
+    <p>Used to collect user input.</p>
     <div class="example">
-      <img src="https://via.placeholder.com/100" alt="Placeholder Image" />
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
+        
+        <label for="color">Favorite Color:</label><br>
+        <select id="color" name="color">
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+        </select><br><br>
+        
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </section>
 
   <section>
-    <h2>&lt;div&gt; and &lt;span&gt;</h2>
-    <p><code>&lt;div&gt;</code> is a block-level container. <code>&lt;span&gt;</code> is an inline container.</p>
+    <h2>&lt;article&gt;, &lt;section&gt;, &lt;aside&gt;</h2>
+    <p>Semantic tags used to organize content.</p>
     <div class="example">
-      <div style="background: lavender; padding: 10px;">This is a div</div>
-      <p>This is a <span style="color: red;">span</span> inside a paragraph.</p>
+      <article>
+        <h3>News Article</h3>
+        <p>This is an article section.</p>
+      </article>
+      <aside>
+        <p>This is a sidebar or related content.</p>
+      </aside>
     </div>
   </section>
 
   <section>
-    <h2>CSS Example</h2>
-    <p>Use CSS to style HTML. CSS can be inline, internal, or external.</p>
-    <div class="example">
-      <style>
-        .blue-box {
-          background: lightblue;
-          padding: 10px;
-          border: 2px solid #333;
-        }
-      </style>
-      <div class="blue-box">Styled with CSS!</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Useful Tags</h2>
-    <ul>
-      <li><code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> — Unordered list</li>
-      <li><code>&lt;strong&gt;</code> — Bold text</li>
-      <li><code>&lt;em&gt;</code> — Italic/emphasized text</li>
-      <li><code>&lt;input&gt;</code> — Form input</li>
-      <li><code>&lt;button&gt;</code> — Button</li>
-    </ul>
+    <h2>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h2>
+    <p>Unordered and ordered lists.</p>
     <div class="example">
       <ul>
-        <li>Item One</li>
-        <li><strong>Bold Item</strong></li>
-        <li><em>Italic Item</em></li>
+        <li>Milk</li>
+        <li>Eggs</li>
       </ul>
-      <input type="text" placeholder="Type here..." />
-      <button>Click Me</button>
+      <ol>
+        <li>Wake up</li>
+        <li>Brush teeth</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>&lt;style&gt; and CSS basics</h2>
+    <p>Use CSS to style elements using selectors and properties.</p>
+    <div class="example">
+      <style>
+        .highlight {
+          background-color: #ffe0f0;
+          color: #8e44ad;
+          font-weight: bold;
+        }
+      </style>
+      <p class="highlight">This is a styled paragraph using CSS.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Flexbox Example (CSS)</h2>
+    <p>Flexbox is a layout model for arranging items in rows/columns.</p>
+    <div class="example flex-box">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>&lt;video&gt; and &lt;audio&gt;</h2>
+    <p>Used to embed media content.</p>
+    <div class="example">
+      <video width="200" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video><br>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+    </div>
+  </section>
+
+  <section>
+    <h2>&lt;meta&gt;</h2>
+    <p>Defines metadata like encoding, author, description.</p>
+    <div class="example">
+      <code>&lt;meta charset="UTF-8"&gt;</code><br>
+      <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
     </div>
   </section>
 
