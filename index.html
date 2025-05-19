@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HTML & CSS Tag Guide</title>
+  <title>Full HTML & CSS Tag Guide</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
+      font-family: 'Segoe UI', sans-serif;
       background: #fdf6ff;
       color: #333;
+      padding: 2rem;
       line-height: 1.6;
     }
 
@@ -17,192 +17,209 @@
       color: #8e44ad;
     }
 
-    code {
-      background: #eee;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-
     section {
-      margin-bottom: 2rem;
-      padding: 1rem;
       background: #fff;
+      padding: 1rem;
+      margin-bottom: 2rem;
       border-left: 5px solid #8e44ad;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
+    code {
+      background: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+
     .example {
-      margin-top: 0.5rem;
       background: #f4f4f4;
       padding: 1rem;
+      margin-top: 0.5rem;
       border-radius: 5px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
     }
 
     th, td {
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
       padding: 0.5rem;
       text-align: left;
     }
 
-    .flex-box {
-      display: flex;
+    .grid-example {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
 
-    .box {
-      background: #d1c4e9;
+    .grid-box {
+      background: #e1bee7;
       padding: 1rem;
-      border-radius: 6px;
-      flex: 1;
       text-align: center;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <h1>HTML & CSS Tag Guide</h1>
+  <h1>Full HTML & CSS Tag Guide</h1>
 
+  <!-- Document Metadata -->
   <section>
-    <h2>&lt;header&gt; / &lt;footer&gt;</h2>
-    <p>Used to define header and footer sections of a document.</p>
+    <h2>Document Metadata</h2>
+    <p>Tags used inside <code>&lt;head&gt;</code> for metadata:</p>
     <div class="example">
-      <header style="background: lavender; padding: 10px;">This is a header</header>
-      <footer style="background: lavenderblush; padding: 10px;">This is a footer</footer>
+      <code>&lt;title&gt;My Page&lt;/title&gt;</code><br>
+      <code>&lt;meta charset="UTF-8"&gt;</code><br>
+      <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code><br>
+      <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>
     </div>
   </section>
 
+  <!-- Structural Tags -->
   <section>
-    <h2>&lt;nav&gt;</h2>
-    <p>Defines a navigation section with links.</p>
+    <h2>Structural Tags</h2>
+    <p>Tags for layout and page structure:</p>
     <div class="example">
-      <nav>
-        <a href="#">Home</a> |
-        <a href="#">About</a> |
-        <a href="#">Contact</a>
-      </nav>
+      <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code><br>
+      <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>
     </div>
   </section>
 
+  <!-- Text Formatting -->
   <section>
-    <h2>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</h2>
-    <p>Used to create tables.</p>
+    <h2>Text Formatting</h2>
+    <p>Inline text-level semantics:</p>
     <div class="example">
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-        </tr>
-        <tr>
-          <td>Alice</td>
-          <td>25</td>
-        </tr>
-      </table>
+      <p>This is <strong>bold</strong>, <em>italic</em>, <u>underlined</u>, and <mark>highlighted</mark> text.</p>
+      <p><small>Small text</small>, <sup>superscript</sup>, and <sub>subscript</sub>.</p>
+      <p><abbr title="Cascading Style Sheets">CSS</abbr> is a styling language.</p>
+      <p><code>&lt;div&gt;</code> is a block element.</p>
     </div>
   </section>
 
+  <!-- Lists -->
   <section>
-    <h2>&lt;form&gt;, &lt;input&gt;, &lt;label&gt;, &lt;textarea&gt;, &lt;select&gt;</h2>
-    <p>Used to collect user input.</p>
+    <h2>Lists</h2>
+    <div class="example">
+      <ul>
+        <li>Unordered item</li>
+        <li>Another item</li>
+      </ul>
+      <ol>
+        <li>Ordered item</li>
+        <li>Second item</li>
+      </ol>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Markup language for the web</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Forms -->
+  <section>
+    <h2>Form Elements</h2>
     <div class="example">
       <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message"></textarea><br><br>
-        
-        <label for="color">Favorite Color:</label><br>
-        <select id="color" name="color">
-          <option value="red">Red</option>
-          <option value="blue">Blue</option>
-        </select><br><br>
-        
+        <label>Name: <input type="text" name="name" /></label><br><br>
+        <label>Password: <input type="password" /></label><br><br>
+        <label>Choose one:</label><br>
+        <input type="radio" name="choice" checked /> Option 1
+        <input type="radio" name="choice" /> Option 2<br><br>
+        <label>Choose many:</label><br>
+        <input type="checkbox" /> A
+        <input type="checkbox" /> B<br><br>
+        <label>Select:</label>
+        <select><option>One</option><option>Two</option></select><br><br>
+        <textarea placeholder="Write something..."></textarea><br><br>
         <button type="submit">Submit</button>
       </form>
     </div>
   </section>
 
+  <!-- Media -->
   <section>
-    <h2>&lt;article&gt;, &lt;section&gt;, &lt;aside&gt;</h2>
-    <p>Semantic tags used to organize content.</p>
+    <h2>Media Tags</h2>
     <div class="example">
-      <article>
-        <h3>News Article</h3>
-        <p>This is an article section.</p>
-      </article>
-      <aside>
-        <p>This is a sidebar or related content.</p>
-      </aside>
-    </div>
-  </section>
-
-  <section>
-    <h2>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h2>
-    <p>Unordered and ordered lists.</p>
-    <div class="example">
-      <ul>
-        <li>Milk</li>
-        <li>Eggs</li>
-      </ul>
-      <ol>
-        <li>Wake up</li>
-        <li>Brush teeth</li>
-      </ol>
-    </div>
-  </section>
-
-  <section>
-    <h2>&lt;style&gt; and CSS basics</h2>
-    <p>Use CSS to style elements using selectors and properties.</p>
-    <div class="example">
-      <style>
-        .highlight {
-          background-color: #ffe0f0;
-          color: #8e44ad;
-          font-weight: bold;
-        }
-      </style>
-      <p class="highlight">This is a styled paragraph using CSS.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Flexbox Example (CSS)</h2>
-    <p>Flexbox is a layout model for arranging items in rows/columns.</p>
-    <div class="example flex-box">
-      <div class="box">Box 1</div>
-      <div class="box">Box 2</div>
-      <div class="box">Box 3</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>&lt;video&gt; and &lt;audio&gt;</h2>
-    <p>Used to embed media content.</p>
-    <div class="example">
+      <img src="https://via.placeholder.com/100" alt="Example Image"><br><br>
       <video width="200" controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        Your browser does not support video.
-      </video><br>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      </video><br><br>
       <audio controls>
-        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-        Your browser does not support audio.
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
       </audio>
     </div>
   </section>
 
+  <!-- Interactive Tags -->
   <section>
-    <h2>&lt;meta&gt;</h2>
-    <p>Defines metadata like encoding, author, description.</p>
+    <h2>Interactive Tags</h2>
     <div class="example">
-      <code>&lt;meta charset="UTF-8"&gt;</code><br>
-      <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+      <details>
+        <summary>Click to expand</summary>
+        <p>This is hidden content.</p>
+      </details>
+      <dialog open>This is a dialog box</dialog>
+      <progress value="70" max="100"></progress>
+    </div>
+  </section>
+
+  <!-- Tables -->
+  <section>
+    <h2>Tables</h2>
+    <div class="example">
+      <table>
+        <caption>Simple Table</caption>
+        <thead>
+          <tr><th>Name</th><th>Age</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Anna</td><td>24</td></tr>
+          <tr><td>Ben</td><td>30</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CSS Example -->
+  <section>
+    <h2>CSS Styling</h2>
+    <div class="example">
+      <style>
+        .styled-box {
+          background: #c8e6c9;
+          padding: 1rem;
+          border: 2px solid green;
+          border-radius: 6px;
+          color: #2e7d32;
+        }
+      </style>
+      <div class="styled-box">This is styled with internal CSS</div>
+    </div>
+  </section>
+
+  <!-- Flex & Grid -->
+  <section>
+    <h2>Flexbox & Grid</h2>
+    <div class="example grid-example">
+      <div class="grid-box">Grid 1</div>
+      <div class="grid-box">Grid 2</div>
+      <div class="grid-box">Grid 3</div>
+    </div>
+  </section>
+
+  <!-- Script -->
+  <section>
+    <h2>JavaScript & Script Tags</h2>
+    <div class="example">
+      <button onclick="alert('Hello from JavaScript!')">Click Me</button>
+      <script>
+        console.log("Script running.");
+      </script>
     </div>
   </section>
 
